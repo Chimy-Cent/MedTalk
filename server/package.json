@@ -2,6 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +20,8 @@
     "stream-chat": "^8.25.0",
     "twilio": "^5.0.1"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2"
+  }
 }
