@@ -1,9 +1,11 @@
-const { connect } = require('getstream');
-const bcrypt = require('bcrypt');
-const StreamChat = require('stream-chat').StreamChat;
-const crypto = require('crypto');
+import connect from 'getstream';
+import bcrypt from 'bcrypt'
+import { StreamChat } from 'stream-chat';
+// const StreamChat = require('stream-chat').StreamChat;
+import crypto from 'crypto'
+import { config as dotenvConfig } from 'dotenv';
+dotenvConfig();
 
-require('dotenv').config();
 
 const api_key = process.env.STREAM_API_KEY;
 const api_secret = process.env.STREAM_API_SECRET;
@@ -56,4 +58,4 @@ const login = async (req, res) => {
     }
 };
 
-module.exports = { signup, login }
+export { signup, login };
